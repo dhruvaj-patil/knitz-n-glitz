@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Bitter';
+    src: url('./assets/fonts/Bitter-.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neulis_Cursive_Bold';
+    src: url('./assets/fonts/Neulis_Cursive_Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Neulis_Cursive_Bold', sans-serif;
+}
