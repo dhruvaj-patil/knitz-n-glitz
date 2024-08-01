@@ -8,10 +8,108 @@
 @font-face {
     font-family: 'Neulis_Cursive_Bold';
     src: url('./assets/fonts/Neulis_Cursive_Bold.otf') format('opentype');
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
 }
 
-* {
+body {
     font-family: 'Neulis_Cursive_Bold', sans-serif;
+}
+
+:root {
+    --footer-background-color: #000000;
+    --footer-fonts-color: #ffffff;
+}
+
+
+/* footer styles */
+footer {
+    font: normal normal light 16px / 25px 'Bitter';
+    background-color: var(--footer-background-color);
+    color: var(--footer-fonts-color);
+    height: 315px;
+    padding: 47px 90px 107px 90px;
+}
+footer .icon {
+    margin-right: 8px;
+    opacity: 1;
+}
+footer .address .icon {
+    width: 18px;
+    height: 24px;
+    background: transparent url('assets/icons/address/Group_906.png') 0% 0% no-repeat padding-box;
+}
+footer .email {
+    justify-content: center;
+}
+footer .email .icon {
+    width: 24px;
+    height: 17px;
+    background: transparent url('assets/icons/email/Path_1320.png') 0% 0% no-repeat padding-box;
+}
+footer .phone {
+    justify-content: end;
+}
+footer .phone .icon {
+    width: 24px;
+    height: 24px;
+    background: transparent url('assets/icons/phone/Path_1321.png') 0% 0% no-repeat padding-box;
+}
+footer .divider {
+    margin-top: 42.5px;
+    margin-bottom: 42.5px;
+    border: 1px solid var(--footer-fonts-color);
+    opacity: 1;
+}
+footer .social-media-icons .icons span {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    margin-right: 12px;
+}
+footer .social-media-icons .icons .facebook {
+    background: transparent url('assets/icons/facebook/Group_189.png') 0% 0% no-repeat padding-box;
+}
+footer .social-media-icons .icons .instagram {
+    background: transparent url('assets/icons/instagram/Group_188.png') 0% 0% no-repeat padding-box;
+}
+footer .social-media-icons .icons .twitter {
+    background: transparent url('assets/icons/twitter/Group_187.png') 0% 0% no-repeat padding-box;
+}
+footer .social-media-icons .icons .youtube {
+    background: transparent url('assets/icons/youtube/Group_5705.png') 0% 0% no-repeat padding-box;
+}
+footer .social-media-icons .copyright {
+    justify-content: end;
+}
+
+/* footer responsive */
+@media (max-width: 768px) {
+    footer {
+        height: 419px;
+        padding-top: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    footer .contact-details>div {
+        padding-bottom: 20px;
+    }
+    footer .divider {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        border: 1px solid var(--footer-fonts-color);
+        opacity: 1;
+    }
+    footer .email,
+    footer .phone {
+        justify-content: start;
+    }
+    footer .social-media-icons .icons {
+        margin-bottom: 30px;
+    }
+    footer .social-media-icons .icons,
+    footer .social-media-icons .copyright {
+        justify-content: center;
+        text-align: center;
+    }
 }
