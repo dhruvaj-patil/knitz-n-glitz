@@ -15,6 +15,41 @@
 :root {
     --footer-background-color: #000000;
     --fonts-white-color: #ffffff;
+    --sponsor-dark-red-color: #96082B;
+}
+
+/* Sponsorship styles */
+div.sponsors {
+    height: 193px;
+    background: var(--sponsor-dark-red-color) 0% 0% no-repeat padding-box;
+    color: var(--fonts-white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div.sponsors a{
+    color: var(--fonts-white-color);
+    text-decoration: none;
+}
+div.sponsors .heading {
+    font: normal normal bold 32px/30px Neulis_Cursive_Bold;
+    letter-spacing: 0px;
+    margin-bottom: 20px;
+}
+div.sponsors .sub-heading.small-screens {
+    display: none;
+}
+div.sponsors .sub-heading.large-screens {
+    display: block;
+}
+div.sponsors .sub-heading>a {
+    font: normal normal bold 28px/36px Neulis_Cursive_Bold;
+    letter-spacing: 0px;
+}
+div.sponsors .sub-heading {
+    font: normal normal normal 28px/36px Bitter;
+    letter-spacing: 0px;
 }
 
 /* FAQs styles */
@@ -51,12 +86,12 @@ div.faqs .questions-grid .question{
 div.faqs .questions-grid .question .question-text,
 div.faqs .questions-grid .count {
     color: var(--fonts-white-color);
-    font: normal normal bold 24px/30px Neulis_Cursive_Bold;
+    font: normal normal bold 28px/30px Neulis_Cursive_Bold;
     letter-spacing: 0px;
 }
 div.faqs .questions-grid .question .answer-text {
     color: var(--fonts-white-color);
-    font: normal normal normal 16px/30px Bitter;
+    font: normal normal normal 20px/30px Bitter;
     letter-spacing: 0px;
     overflow-wrap: break-word;
 }
@@ -151,8 +186,40 @@ footer .social-media-icons .copyright {
     justify-content: end;
 }
 
-/* footer responsive */
 @media (max-width: 768px) {
+    /* sponsorship responsive */
+    div.sponsors {
+        height: 320px;
+    }
+    div.sponsors .sub-heading.large-screens {
+        display: none;
+    }
+    div.sponsors .sub-heading.small-screens {
+        display: block;
+    }
+    div.sponsors .heading {
+        font: normal normal bold 28px/30px Neulis_Cursive_Bold;
+        margin-bottom: 40px;
+    }
+    div.sponsors .sub-heading>a {
+        font: normal normal bold 20px/26px Neulis_Cursive_Bold;
+    }
+    div.sponsors .sub-heading {
+        font: normal normal normal 20px/26px Bitter;
+    }
+
+    /* FAQs responsive */
+    div.faqs .heading {
+        font: normal normal bold 28px/36px Neulis_Cursive_Bold;
+    }
+    div.faqs .questions-grid .count {
+        font: normal normal bold 20px/25px Neulis_Cursive_Bold;
+    }
+    div.faqs .questions-grid .question .answer-text {
+        font: normal normal normal 16px/24px Bitter;
+    }
+
+    /* footer responsive */
     footer {
         height: 419px;
         padding-top: 60px;
