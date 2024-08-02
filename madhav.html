@@ -11,6 +11,107 @@
 
 <body>
     <header></header>
+    <div class="faqs">
+        <div class="faqs-container d-flex">
+            <div class="heading">
+                FAQs
+            </div>
+            <div class="questions-grid row" id="faqs-accordian">
+                <div class="col-10 col-md-5">
+                    <div class="question col-12">
+                        <div class="row" id="questionOne">
+                            <div class="col-1">
+                                <div class="count">1.</div>
+                            </div>
+                            <div class="col-10">
+                                <div class="question-text">Who can participate?</div>
+                            </div>
+                            <div class="col-1">
+                                <div class="answer-icon open" onclick="toggleOpenButton(this)" data-bs-toggle="collapse" data-bs-target="#answerOne" aria-expanded="true" aria-controls="answerOne">
+                                    <div class="icon"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="answerOne" class="collapse row" aria-labelledby="questionOne" data-bs-parent="#faqs-accordian">
+                            <div class="col-1"></div>
+                            <div class="col-10">
+                                <div class="answer-text">Testing</div>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                    </div>
+                    <div class="question col-12 mb-0">
+                        <div class="row" id="questionTwo">
+                            <div class="col-1">
+                                <div class="count">2.</div>
+                            </div>
+                            <div class="col-10">
+                                <div class="question-text">Where is the event happening?</div>
+                            </div>
+                            <div class="col-1">
+                                <div class="answer-icon open" onclick="toggleOpenButton(this)" data-bs-toggle="collapse" data-bs-target="#answerTwo" aria-expanded="true" aria-controls="answerTwo">
+                                    <div class="icon"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="answerTwo" class="collapse row" aria-labelledby="questionTwo" data-bs-parent="#faqs-accordian">
+                            <div class="col-1"></div>
+                            <div class="col-10">
+                                <div class="answer-text">Testing</div>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10 col-md-5">
+                    <div class="question col-12">
+                        <div class="row" id="questionThree">
+                            <div class="col-1">
+                                <div class="count">3.</div>
+                            </div>
+                            <div class="col-10">
+                                <div class="question-text">For how long the contest will run?</div>
+                            </div>
+                            <div class="col-1">
+                                <div class="answer-icon open" onclick="toggleOpenButton(this)" data-bs-toggle="collapse" data-bs-target="#answerThree" aria-expanded="true" aria-controls="answerThree">
+                                    <div class="icon"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="answerThree" class="collapse row" aria-labelledby="questionThree" data-bs-parent="#faqs-accordian">
+                            <div class="col-1"></div>
+                            <div class="col-10">
+                                <div class="answer-text">TestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTesting</div>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                    </div>
+                    <div class="question col-12">
+                        <div class="row" id="questionFour">
+                            <div class="col-1">
+                                <div class="count">4.</div>
+                            </div>
+                            <div class="col-10">
+                                <div class="question-text">Can I participate if I am not from Guwahati?</div>
+                            </div>
+                            <div class="col-1">
+                                <div class="answer-icon open" onclick="toggleOpenButton(this)" data-bs-toggle="collapse" data-bs-target="#answerFour" aria-expanded="true" aria-controls="answerFour">
+                                    <div class="icon"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="answerFour" class="collapse row" aria-labelledby="questionFour" data-bs-parent="#faqs-accordian">
+                            <div class="col-1"></div>
+                            <div class="col-10">
+                                <div class="answer-text">Testing</div>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="row contact-details">
             <div class="col-12 col-md-4">
@@ -45,7 +146,7 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="madhav.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
