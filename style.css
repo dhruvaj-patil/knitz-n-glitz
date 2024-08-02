@@ -24,6 +24,115 @@
     width: 80% !important;
 }
 
+/* prizes */
+div.prizes .small-screens {
+    display: none;
+}
+div.prizes .large-screens {
+    display: flex;
+}
+div.prizes {
+    height: 924px;
+    background: transparent url('assets/background-images/prices/prices_bg_large.gif') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div.prizes>.heading {
+    text-align: center;
+    font: normal normal bold 48px/63px Neulis_Cursive_Bold;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    margin-bottom: 50px;
+}
+div.prizes .prize-content {
+    width: 90%;
+    height: 397px;
+    background: rgb(0, 0, 0, 0.5) 0% 0% no-repeat padding-box;
+}
+div.prizes .opportunities {
+    width: 90%;
+    height: 202px;
+    background: rgb(0, 0, 0, 0.5) 0% 0% no-repeat padding-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+div.prizes .opportunities .heading-row {
+    text-align: left;
+    font: normal normal bold 27px/35px Neulis_Cursive_Bold;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    margin-bottom: 35px !important;
+}
+div.prizes .opportunities .content-row { 
+    text-align: center;
+    font: normal normal normal 20px/32px Bitter;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+div.prizes .prize-content .heading-row {
+    margin-top: 30px !important;
+    margin-bottom: 40px !important;
+}
+div.prizes .prize-content .icons-row {
+    margin-top: 20px !important;
+    margin-bottom: 30px !important;
+}
+div.prizes .prize-content .heading {
+    text-align: center;
+    font: normal normal bold 32px/42px Neulis_Cursive_Bold;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+div.prizes .prize-content .price-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+div.prizes .prize-content .price-card .content {
+    text-align: center;
+    font: normal normal normal 26px/37px Bitter;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+div.prizes .prize-content .price-card .content span {
+    text-align: center;
+    font: normal normal normal 26px/37px Bitter;
+    letter-spacing: 0px;
+    color: #D6973B;
+}
+div.prizes .prize-content .price-card .icon.one {
+    width: 130px;
+    height: 110px;
+    background: transparent url('assets/icons/prize-1/Union\ 1.png') 0% 0% no-repeat padding-box;
+    border: 1px solid #00000000;
+    opacity: 1;
+}
+div.prizes .prize-content .price-card .icon.two {
+    width: 130px;
+    height: 93px;
+    background: transparent url('assets/icons/prize-2/Union\ 2.png') 0% 0% no-repeat padding-box;
+    border: 1px solid #00000000;
+    opacity: 1;
+}
+div.prizes .prize-content .price-card .icon.three {
+    width: 120px;
+    height: 120px;
+    background: transparent url('assets/icons/prize-3/Union\ 3.png') 0% 0% no-repeat padding-box;
+    border: 1px solid #00000000;
+    opacity: 1;
+}
+
 /* participate */
 div.participate {
     height: 907px;
@@ -524,6 +633,56 @@ footer .social-media-icons .copyright {
 }
 
 @media (max-width: 992px) {
+    /* prizes responsive */
+    div.prizes .small-screens {
+        display: block;
+        padding: 40px 0px;
+    }
+    div.prizes .large-screens {
+        display: none;
+    }
+    div.prizes {
+        height: 1386px;
+    }
+    div.prizes .prize-content {
+        height: 789px;
+    }
+    div.prizes .opportunities {
+        height: 328px;
+    }
+    div.prizes>.heading {
+        font: normal normal bold 28px/36px Neulis_Cursive_Bold;
+    }
+    div.prizes .opportunities .heading-row,
+    div.prizes>.heading {
+        font: normal normal bold 22px/28px Neulis_Cursive_Bold;
+    }
+    div.prizes .prize-content .price-card .content {
+        font: normal normal normal 20px/30px Bitter;
+    }
+    div.prizes .prize-content .price-card .content span {
+        font: normal normal normal 20px/30px Bitter;
+    }
+    div.prizes .opportunities .content-row {
+        font: normal normal normal 16px/32px Bitter;
+    }
+    
+    div.prizes .prize-content .price-card .icon.one {
+        width: 100px;
+        height: 84.74px;
+        background-size: cover;
+    }
+    div.prizes .prize-content .price-card .icon.one {
+        width: 100px;
+        height: 84.74px;
+        background-size: cover;
+    }
+    div.prizes .prize-content .price-card .icon.one {
+        width: 105px;
+        height: 90px;
+        background-size: cover;
+    }
+
     /* participate responsive */
     div.participate {
         height: 1555px;
