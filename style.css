@@ -728,6 +728,16 @@ footer .social-media-icons .copyright {
     div.participate .steps {
         width: 100%;
     }
+    div.participate .buttons {
+        flex-direction: column;
+    }
+    div.participate .buttons .enroll-designer button {
+        margin-right: 0px;
+    }
+    div.participate .buttons .enroll-model button {
+        margin-top: 15px;
+        margin-left: 0px;
+    }
     div.participate .buttons .enroll-designer button,
     div.participate .buttons .enroll-model button {
         width: 212px;
