@@ -13,9 +13,152 @@
 }
 
 :root {
-    --footer-background-color: #000000;
+    --background-black-color: #000000;
     --fonts-white-color: #ffffff;
     --sponsor-dark-red-color: #96082B;
+}
+
+.p-l-100 {
+    padding-left: 100px !important;
+}
+
+/* registrations open */
+div.registrations-open {
+    height: 919px;
+    background: var(--background-black-color) 0% 0% no-repeat padding-box;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+div.registrations-open .heading {
+    text-align: center;
+    font: normal normal bold 48px/63px Neulis_Cursive_Bold;
+    letter-spacing: 0px;
+    color: var(--fonts-white-color);
+    padding-bottom: 50px;
+}
+div.registrations-open .states-grid .large-screens {
+    display: none;
+}
+div.registrations-open .states-grid .state {
+    margin: 0px 10px;
+}
+div.registrations-open .states-grid .row {
+    justify-content: space-evenly;
+}
+div.registrations-open .states-grid,
+div.registrations-open .register-now,
+div.registrations-open .limited-slots,
+div.registrations-open .counts {
+    padding-bottom: 30px;
+}
+div.registrations-open .states-grid .image-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.registrations-open .states-grid .image-body .text {
+    text-align: center;
+    font: normal normal normal 20px/27px Bitter;
+    letter-spacing: 0px;
+    color: var(--fonts-white-color);
+    opacity: 1;
+}
+div.registrations-open .register-now .register-now-btn {
+    background: transparent linear-gradient(69deg, #97082C 0%, #790319 17%, #D90743 26%, #5E0008 37%, #CC0D44 59%, #87031E 73%, #D01047 88%, #96072A 100%) 0% 0% no-repeat padding-box;
+    border-radius: 33px;
+    opacity: 1;
+    height: 66px;
+    width: 214px;
+}
+div.registrations-open .register-now .register-now-text {
+    text-align: center;
+    font: normal normal normal 21px/26px Bitter;
+    letter-spacing: 0px;
+    color: var(--fonts-white-color);
+    opacity: 1;
+}
+div.registrations-open .limited-slots {
+    text-align: center;
+    font: normal normal bold 32px/42px Neulis_Cursive_Bold;
+    letter-spacing: 0px;
+    color: var(--fonts-white-color);
+    opacity: 1;
+}
+div.registrations-open .counts .model-count, 
+div.registrations-open .counts .designer-count{
+    margin-right: 25px;
+}
+div.registrations-open .counts .model-count, 
+div.registrations-open .counts .designer-count {
+    text-align: center;
+    font: normal normal bold 98px/128px Neulis_Cursive_Bold;
+    letter-spacing: 0px;
+    opacity: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--fonts-white-color);
+    text-shadow: none;
+}
+div.registrations-open .counts {
+    display: flex;
+    justify-content: center;
+}
+div.registrations-open .counts .text {
+    color: var(--fonts-white-color);
+    text-align: center;
+    font: normal normal normal 26px/128px Bitter;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+div.registrations-open .terms-link {
+    text-align: center;
+    text-decoration: underline;
+    font: normal normal normal 20px/30px Bitter;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+div.registrations-open .states-grid .image-body .image {
+    margin-bottom: 20px;
+    opacity: 1;
+    width: 130px;
+    height: 130px;
+}
+div.registrations-open .states-grid .image-body.sikkim .image {
+    background: transparent url('assets/states/sikkim/sikkim.png') 0% 0% no-repeat padding-box;
+    background-size: cover;
+}
+div.registrations-open .states-grid .image-body.assam .image {
+    background: transparent url('assets/states/assam/Kamakhya_Temple\,_Guwahati.png') 0% 0% no-repeat padding-box;
+    background-size: cover;
+}
+div.registrations-open .states-grid .image-body.manipur .image {
+    background: transparent url('assets/states/manipur/Kamakhya_Temple\,_Guwahati.png') 0% 0% no-repeat padding-box;
+    background-size: cover;
+}
+div.registrations-open .states-grid .image-body.mizoram .image {
+    background: transparent url('assets/states/mizoram/Kamakhya_Temple\,_Guwahati.png') 0% 0% no-repeat padding-box;
+    background-size: cover;
+}
+div.registrations-open .states-grid .image-body.arunachal .image {
+    background: transparent url('assets/states/arunachal/Kamakhya_Temple\,_Guwahati.png') 0% 0% no-repeat padding-box;
+    background-size: cover;
+}
+div.registrations-open .states-grid .image-body.meghalaya .image {
+    background: transparent url('assets/states/meghalaya/Kamakhya_Temple\,_Guwahati.png') 0% 0% no-repeat padding-box;
+    background-size: cover;
+}
+div.registrations-open .states-grid .image-body.tripura .image {
+    background: transparent url('assets/states/tripura/Kamakhya_Temple\,_Guwahati.png') 0% 0% no-repeat padding-box;
+    background-size: cover;
+}
+div.registrations-open .states-grid .image-body.nagaland .image {
+    background: transparent url('assets/states/nagaland/Kamakhya_Temple\,_Guwahati.png') 0% 0% no-repeat padding-box;
+    background-size: cover;
+}
+div.registrations-open .counts .row>div {
+    padding: 0px 50px;
+    display: flex;
 }
 
 /* Sponsorship styles */
@@ -128,7 +271,7 @@ div.faqs .answer-icon.close .icon {
 /* footer styles */
 footer {
     font: normal normal light 16px / 25px 'Bitter';
-    background-color: var(--footer-background-color);
+    background-color: var(--background-black-color);
     color: var(--fonts-white-color);
     height: 315px;
     padding: 47px 90px 107px 90px;
@@ -184,6 +327,65 @@ footer .social-media-icons .icons .youtube {
 }
 footer .social-media-icons .copyright {
     justify-content: end;
+}
+
+@media (max-width: 1200px) {
+    /* registrations open responsive */
+    div.registrations-open .heading {
+        font: normal normal bold 28px/36px Neulis_Cursive_Bold;
+    }
+    div.registrations-open {
+        height: 1280px;
+    }
+    div.registrations-open .states-grid .large-screens {
+        display: block;
+    }
+    div.registrations-open .states-grid .state {
+        margin-bottom: 60px;
+    }
+    div.registrations-open .states-grid .image-body .image {
+        margin-bottom: 0px;
+        opacity: 1;
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+    }
+    div.registrations-open .states-grid .image-body .text {
+        font: normal normal normal 16px/37px Bitter;
+    }
+    div.registrations-open .register-now .register-now-btn {
+        height: 53px;
+    }
+    div.registrations-open .register-now .register-now-text {
+        font: normal normal normal 16px/20px Bitter;
+    }
+    div.registrations-open .limited-slots {
+        font: normal normal bold 22px/30px Neulis_Cursive_Bold;
+    }
+    div.registrations-open .counts .model-count, 
+    div.registrations-open .counts .designer-count {
+        font: normal normal bold 68px/89px Neulis_Cursive_Bold; 
+    }
+    div.registrations-open .counts .text {
+        font: normal normal normal 20px/89px Bitter;
+    }
+    div.registrations-open .terms-link {
+        font: normal normal normal 16px/30px Bitter;
+    }
+}
+
+@media (max-width: 992px) {
+    div.registrations-open .counts .row>div {
+        display: block;
+    }
+    div.registrations-open .counts .model-count, 
+    div.registrations-open .counts .designer-count {
+        font: normal normal bold 68px/89px Neulis_Cursive_Bold; 
+        margin-right: 0px;
+    }
+    div.registrations-open .counts .text {
+        font: normal normal normal 20px/37px Bitter;
+    }
 }
 
 @media (max-width: 768px) {
