@@ -14,12 +14,153 @@
 
 :root {
     --background-black-color: #000000;
+    --background-black-shadow-color: #00000029;
     --fonts-white-color: #ffffff;
+    --participate-dark-red-line-color: #67031C;
     --sponsor-dark-red-color: #96082B;
 }
 
-.p-l-100 {
-    padding-left: 100px !important;
+.w-80 {
+    width: 80% !important;
+}
+
+/* participate */
+div.participate {
+    height: 907px;
+    background: transparent url('assets/background-images/participate/AdobeStock_884837217.jpg') 0% 0% no-repeat padding-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+div.participate .large-screens {
+    display: block;
+}
+div.participate .small-screens {
+    display: none;
+}
+div.participate .heading {
+    text-align: center;
+    font: normal normal bold 48px/63px Neulis_Cursive_Bold;
+    letter-spacing: 0px;
+    color: var(--background-black-color);
+    opacity: 1;
+    margin-bottom: 60px;
+    z-index: 1;
+}
+div.participate .steps {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+}
+div.participate .steps .row {
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 1;
+}
+div.participate .steps .center-red-line {
+    width: 80%;
+    height: 72px;
+    background: var(--participate-dark-red-line-color) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+}
+div.participate .step-card {
+    width: 376px;
+    aspect-ratio: 188 / 201;
+    background: var(--fonts-white-color) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 40px 60px var(--background-black-shadow-color);
+    opacity: 1;
+}
+div.participate .step-card>div.row {
+    align-items: center;
+    height: 100%;
+}
+div.participate .step-card>div.row .icon-col{
+    padding-left: 0px;
+    padding-right: 30px;
+}
+div.participate .step-card>div.row .content-col div{
+    margin-bottom: 30px;
+}
+div.participate .step-card .arrow {
+    background: transparent url('assets/icons/right-arrow/Path\ 1264.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    width: 76px;
+    height: 153px;
+}
+div.participate .step-card.step-1 .step-icon {
+    background: transparent url('assets/icons/step-1/Layer\ 2.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    width: 100px;
+    height: 96px;
+}
+div.participate .step-card.step-2 .step-icon {
+    background: transparent url('assets/icons/step-2/Group\ 901.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    width: 100px;
+    height: 99px;
+}
+div.participate .step-card.step-3 .step-icon {
+    background: transparent url('assets/icons/step-3/Group\ 902.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    width: 100px;
+    height: 88px;
+}
+div.participate .step-card .step-count {
+    text-align: left;
+    font: normal normal bold 32px/30px Neulis_Cursive_Bold;
+    letter-spacing: 0px;
+    color: var(--background-black-color);
+    opacity: 1;
+}
+div.participate .step-card .step-desc {
+    text-align: left;
+    font: normal normal normal 26px/30px Bitter;
+    letter-spacing: 0px;
+    color: var(--background-black-color);
+    opacity: 1;
+}
+div.participate .buttons {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+div.participate .buttons .enroll-designer button {
+    width: 266px;
+    height: 66px;
+    background: transparent linear-gradient(72deg, #97082C 0%, #790319 17%, #D90743 26%, #5E0008 37%, #CC0D44 59%, #87031E 73%, #D01047 88%, #96072A 100%) 0% 0% no-repeat padding-box;
+    border-radius: 33px;
+    opacity: 1;
+    margin-right: 15px;
+}
+div.participate .buttons .enroll-designer button span {
+    text-align: center;
+    font: normal normal normal 21px/26px Bitter;
+    letter-spacing: 0px;
+    color: var(--fonts-white-color);
+    opacity: 1;
+    vertical-align: middle;
+}
+div.participate .buttons .enroll-model button {
+    width: 266px;
+    height: 66px;
+    background: transparent linear-gradient(74deg, #C8A760 0%, #AC6413 13%, #FDE5A7 23%, #BE7619 38%, #D99B3F 47%, #B86D15 64%, #EBA23F 77%, #BD7518 100%) 0% 0% no-repeat padding-box;
+    border-radius: 33px;
+    opacity: 1;
+    margin-left: 15px;
+}
+div.participate .buttons .enroll-model button span {
+    text-align: center;
+    font: normal normal normal 21px/26px Bitter;
+    letter-spacing: 0px;
+    color: var(--background-black-color);
+    opacity: 1;
+    vertical-align: middle;
 }
 
 /* registrations open */
@@ -330,6 +471,14 @@ footer .social-media-icons .copyright {
 }
 
 @media (max-width: 1200px) {
+    /* participate responsive */
+    div.participate .step-card {
+        width: 330px;
+    }
+    div.participate .steps {
+        width: 90%;
+    }
+
     /* registrations open responsive */
     div.registrations-open .heading {
         font: normal normal bold 28px/36px Neulis_Cursive_Bold;
@@ -375,6 +524,101 @@ footer .social-media-icons .copyright {
 }
 
 @media (max-width: 992px) {
+    /* participate responsive */
+    div.participate {
+        height: 1555px;
+    }
+    div.participate .heading {
+        font: normal normal bold 28px/36px Neulis_Cursive_Bold;
+    }
+    div.participate .step-card .arrow {
+        width: 50px;
+        height: 100px;
+        background: transparent url('assets/icons/down-arrow/Path\ 1331.png') 0% 0% no-repeat padding-box;
+        transform: rotate(135deg);
+        position: relative;
+        top: -68px;
+        left: -18px;
+    }
+    div.participate .step-card.step-1 .step-icon {
+        width: 80px;
+        height: 76.85px;
+        background-size: cover;
+    }
+    div.participate .step-card.step-2 .step-icon {
+        width: 80px;
+        height: 79.13px;
+        background-size: cover;
+    }
+    div.participate .step-card.step-3 .step-icon {
+        width: 80px;
+        height: 70.4px;
+        background-size: cover;
+    }
+    div.participate .step-card .step-count {
+        font: normal normal bold 22px/30px Neulis_Cursive_Bold;
+    }
+    div.participate .step-card .step-desc {
+        font: normal normal normal 20px/25px Bitter;
+    }
+    div.participate .step-card {
+        width: 335px;
+        height: 322px;
+        aspect-ratio: unset;
+    }
+    div.participate .steps {
+        width: 100%;
+    }
+    div.participate .buttons .enroll-designer button,
+    div.participate .buttons .enroll-model button {
+        width: 212px;
+        height: 53px;
+    }
+    div.participate .buttons .enroll-designer button span,
+    div.participate .buttons .enroll-model button span {
+        font: normal normal normal 16px/20px Bitter;
+    }
+    .step-card-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    div.participate .steps .center-red-line {
+        transform: rotate(90deg);
+        width: 120%;
+        height: 50px;
+        background: var(--participate-dark-red-line-color) 0% 0% no-repeat padding-box;
+        opacity: 1;
+        position: absolute;
+        z-index: 0;
+        left: -10%;
+        top: 68%;
+    }
+    div.participate .large-screens {
+        display: none;
+    }
+    div.participate .small-screens {
+        display: block;
+    }
+    div.participate .step-card .step-count {
+        text-align: center;
+    }
+    div.participate .step-card .step-desc {
+        text-align: center;
+    }
+    div.participate .step-card>div.row .content-col{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    div.participate .step-card>div.row .icon-col.small-screens {
+        padding-right: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+
+
     div.registrations-open .counts .row>div {
         display: block;
     }
