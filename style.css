@@ -142,6 +142,7 @@ div.participate {
     justify-content: center;
     align-items: center;
     background-size: cover;
+    position: relative;
 }
 div.participate .large-screens {
     display: block;
@@ -754,14 +755,19 @@ footer .social-media-icons .copyright {
     }
     div.participate .steps .center-red-line {
         transform: rotate(90deg);
-        width: 120%;
-        height: 50px;
+        /* translate: 50% 50%; */
+        width: 750px;
+        height: 65px;
         background: var(--participate-dark-red-line-color) 0% 0% no-repeat padding-box;
         opacity: 1;
         position: absolute;
         z-index: 0;
-        left: -10%;
-        top: 68%;
+        /* left: -5.777777%; */
+        /* top: 37%; */
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+        right: 50%;
+        top: 40%
     }
     div.participate .large-screens {
         display: none;

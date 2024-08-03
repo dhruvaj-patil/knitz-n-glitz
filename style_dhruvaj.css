@@ -31,6 +31,15 @@
 
 }
 
+/* ScrollToTop */
+.scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background: transparent;
+    border: 0px
+}
 
 /************ NAVBAR ***************/
 .glitz-logo {
@@ -64,7 +73,7 @@
 
 .desktopOnly .navbarNav {
     padding: 0 2em;
-
+    margin: 0;
     display: flex;
 }
 
@@ -208,18 +217,26 @@ text-underline-offset: 2px;
     .collapsed .menu-dropdown.close {
         display: none;
     } */
-    .menu-dropdown.close {
+
+    /* .navbar-toggler:not(.collapsed) .menu-dropdown.open {
+        display: block; */
+
+
+    .navbar-toggler .menu-dropdown.open {
         display: block;
     }
 
-    .menu-dropdown.open {
+    .navbar-toggler .menu-dropdown.close {
         display: none;
     }
 
-    .collapsed .menu-dropdown.open {
+    /* .navbar-toggler:not(.collapsed) .menu-dropdown.close {
+        display: none;
         display: block;
 
-    }
+    } */
+
+
 
     .collapsed .menu-dropdown.close {
         display: none;
@@ -260,7 +277,7 @@ text-underline-offset: 2px;
         bottom: -11px;
         /* height: 0.3125em; */
         background-image: var(--star-icon-white);
-        background-repeat:  no-repeat;
+        background-repeat: no-repeat;
         background-size: auto 100%;
         width: 16px;
         height: 16px;
@@ -287,12 +304,11 @@ text-underline-offset: 2px;
         bottom: -10px;
         /* height: 0.3125em; */
         background-image: var(--star-icon-white);
-        background-repeat:  no-repeat;
+        background-repeat: no-repeat;
         background-size: auto 100%;
         width: 16px;
         height: 16px;
     }
-
 
 }
 
@@ -301,10 +317,20 @@ text-underline-offset: 2px;
 
 
 /******* Carousel START *******/
-.landingPage {
+#landingPage {
     height: 90vh;
     background: red;
+    position: relative;
 }
+
+#landingPage .custom-indicators {
+    background: transparent linear-gradient(233deg, #C8A760 0%, #AC6413 13%, #FDE5A7 23%, #BE7619 38%, #D99B3F 47%, #B86D15 64%, #EBA23F 77%, #BD7518 100%) 0% 0% no-repeat padding-box;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+
 
 .custom-carousel {
     height: calc(100vh - 5em);
@@ -375,21 +401,24 @@ text-underline-offset: 2px;
     color: white;
     border: none;
     padding: 0.5em 1em;
-    border-radius: 5em;
+    border-radius: 33px;
     font-size: 1em;
     font-weight: 500;
     text-transform: capitalize;
     margin: 2em;
     max-width: 250px;
+    min-height: 65px;
 }
 
 .button-accept {
+    max-width: 250px;
+    min-height: 65px;
     background: var(--custom-button-accept);
     /* color: white; */
     text-wrap: nowrap;
     border: none;
     padding: 0.5em 1em;
-    border-radius: 5em;
+    border-radius: 33px;
     font-size: 1em;
     font-weight: 500;
     text-transform: capitalize;
@@ -399,21 +428,35 @@ text-underline-offset: 2px;
 
 
 @media (max-width: 768px) {
-    
-.custom-carousel .carousel-content h1 {
-    text-align: left;
-    font: normal normal bold 2em/1em Neulis Cursive;
-    letter-spacing: 0px;
-    color: #FFFFFF;
 
-}
+    .button-danger {
+        min-height: 50px;
+        min-width: 210px;
+        margin: 10px 0em;
+        padding: 0px;
+    }
 
-.custom-carousel .carousel-content h4 {
-    /* text-align: left; */
-    font: normal normal bold 1em/1em Neulis Cursive;
-    /* /* letter-spacing: 0.6px; */
-    color: #FFFFFF; */
-}
+    .button-accept {
+        min-height: 50px;
+        min-width: 210px;
+        margin: 10px 0px;
+        padding: 0px;
+    }
+
+    .custom-carousel .carousel-content h1 {
+        text-align: left;
+        font: normal normal bold 2em/1em Neulis Cursive;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+
+    }
+
+    .custom-carousel .carousel-content h4 {
+        /* text-align: left; */
+        font: normal normal bold 1em/1em Neulis Cursive;
+        /* /* letter-spacing: 0.6px; */
+        color: #FFFFFF;
+    }
 }
 
 /******* Landing Carousel END *******/
@@ -480,9 +523,24 @@ text-underline-offset: 2px;
     display: flex;
 }
 
+#aboutUs .section-2 .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 2em; */
+}
+
 #aboutUs .section-2 .content-container {
     background-color: transparent;
+    align-items: end;
+    flex: 2;
+    display: flex;
+    justify-content: start;
     align-items: start;
+    flex-direction: column;
+    /* background-color: var(--company-white); */
+    margin: 2em;
     padding: 2em;
 
 }
@@ -527,9 +585,8 @@ text-underline-offset: 2px;
     max-width: 250px;
 }
 
-#aboutUs .section-3 .feature img {
-    /* width: 100px; */
-    /* height: 32px; */
+
+#aboutUs .section-3 .feature .img-container {
     width: 100px;
     height: 100px;
     padding: 24px;
@@ -538,17 +595,24 @@ text-underline-offset: 2px;
     border-radius: 50%;
     margin: 10px;
 }
+#aboutUs .section-3 .feature img {
+    /* width: 100px; */
+    /* height: 32px; */
+    width: 100%;
+    height: 100%;
+}
 
-#aboutUs .section-3 .feature .title {
+#aboutUs .section-3 .title {
     /* width: 100px; */
     text-align: center;
     text-align: center;
     font: normal normal bold 22px/28px Neulis Cursive;
     letter-spacing: 0px;
     color: #96082B;
+
 }
 
-#aboutUs .section-3 .feature .content {
+#aboutUs .section-3 .content {
     /* width: 100px; */
     text-align: center;
     text-align: center;
@@ -557,8 +621,21 @@ text-underline-offset: 2px;
     color: #000000;
 }
 
+#aboutUs .section-3 .feature .content .title {
+    font: normal normal bold 22px/28px Neulis Cursive;
+
+
+}
+
 #aboutUs #features {
     padding: 4em 0px;
+}
+
+#aboutUs #features .custom-indicators {
+    background: transparent linear-gradient(233deg, #C8A760 0%, #AC6413 13%, #FDE5A7 23%, #BE7619 38%, #D99B3F 47%, #B86D15 64%, #EBA23F 77%, #BD7518 100%) 0% 0% no-repeat padding-box;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
 }
 
 
@@ -573,6 +650,11 @@ text-underline-offset: 2px;
 
 
 @media (max-width: 768px) {
+    #aboutUs .section-3 .feature img  {
+        max-height: 48px;
+        max-width: 48px;
+    }
+
     #aboutUs .section-1 {
         flex-direction: column;
     }
@@ -584,6 +666,7 @@ text-underline-offset: 2px;
     #aboutUs .section-1 img {
         max-height: 250px;
     }
+
     #aboutUs .section-2 img {
         max-height: 250px;
     }
@@ -591,7 +674,27 @@ text-underline-offset: 2px;
     #aboutUs .section-3 .desktop-feature-container {
         display: none;
     }
+
+    #aboutUs .content-container .title {
+        text-align: center;
+    }
+
+    #aboutUs .content-container .content {
+        text-align: center;
+    }
+
+    #aboutUs .section-2 .content-container {
+        align-items: center;
+    }
+
+    #aboutUs .section-3 .title {
+        margin-top: 2em;
+    }
 }
 
 
 /******** About Us End  ********/
+
+/******** participate Start ********/
+
+/******** participate End ********/

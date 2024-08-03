@@ -13,6 +13,14 @@
 </head>
 
 <body>
+    <!-- ######## ScrollToTop Start ######## -->
+
+    <div>
+        <button class="scrollToTop" onclick="scrollToTop(this)">
+            <img src="dj_assets/scrollToTop/scrollToTop.svg" alt="Scroll To Top">
+        </button>
+    </div>
+    <!-- ######## ScrollToTop End ########-->
     <!--######## NavBar ########-->
     <nav class="navbar navbar-expand-md custom-navbar sticky-top navbar-light bg-white">
         <div class="desktopOnly container-fluid p-0 ">
@@ -41,7 +49,7 @@
                 <div class="nav-item position-relative text-center col ">
 
 
-                    <a class="navbar-link text-black" href="#registrationsOpen">Enroll</a>
+                    <a class="navbar-link text-black" href="#participate">Enroll</a>
                 </div>
                 <div class="nav-item position-relative text-center col">
                     <a class="navbar-link text-black" href="#faqs">FAQ's</a>
@@ -61,10 +69,9 @@
                 class="img-thumbnail border border-0 bg-transparent glitz-logo" alt="Logo">
             <button class="navbar-toggler  border border-0 " type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavMobile" aria-controls="navbarNavMobile" aria-expanded="false"
-                aria-label="Toggle navigation">
+                aria-label="Toggle navigation" onclick="menuIconSwitch(this)">
                 <!-- <span class="navbar-toggler-icon"></span> -->
-                <img src="dj_assets/header/menu.png" class="img-thumbnail border border-0 menu-dropdown open"
-                    alt="Menu">
+                <img src="dj_assets/header/menu.png" class="img-thumbnail border border-0 menu-dropdown " alt="Menu">
                 <img src="dj_assets/header/cross.svg" class="img-thumbnail border border-0 menu-dropdown close"
                     alt="Close">
             </button>
@@ -73,30 +80,36 @@
 
                     <div class="navbar-nav d-flex menu-links">
                         <div class="nav-item position-relative text-center">
-                            <a class="navbar-link navbar-selected text-light" aria-current="page" href="#">Home</a>
+                            <a class="navbar-link navbar-selected text-light" aria-current="page" href="#"
+                                onclick="toggleNavbarSelection(this)">Home</a>
                         </div>
                         <div class="nav-item position-relative text-center">
 
-                            <a class="navbar-link text-light" href="#">About Us</a>
-                        </div>
-                        <div class="nav-item position-relative text-center">
-
-
-                            <a class="navbar-link text-light" href="#">Prizes</a>
-                        </div>
-                        <div class="nav-item position-relative text-center">
-
-
-                            <a class="navbar-link text-light" href="#">Enroll</a>
+                            <a class="navbar-link text-light" href="#aboutUs"
+                                onclick="toggleNavbarSelection(this)">About Us</a>
                         </div>
                         <div class="nav-item position-relative text-center">
 
 
-                            <a class="navbar-link text-light" href="#">FAQ's</a>
+                            <a class="navbar-link text-light" href="#prizes"
+                                onclick="toggleNavbarSelection(this)">Prizes</a>
                         </div>
                         <div class="nav-item position-relative text-center">
 
-                            <a class="navbar-link text-light" href="#">Contact Us</a>
+
+                            <a class="navbar-link text-light" href="#participate"
+                                onclick="toggleNavbarSelection(this)">Enroll</a>
+                        </div>
+                        <div class="nav-item position-relative text-center">
+
+
+                            <a class="navbar-link text-light" href="#faqs"
+                                onclick="toggleNavbarSelection(this)">FAQ's</a>
+                        </div>
+                        <div class="nav-item position-relative text-center">
+
+                            <a class="navbar-link text-light" href="#sponsors"
+                                onclick="toggleNavbarSelection(this)">Contact Us</a>
 
                         </div>
                     </div>
@@ -142,25 +155,68 @@
     <!--######## NavBar End ########-->
 
     <!--######## Landing Page Start ########-->
-    <div id="landingPage" class="carousel slide carousel-fade">
-        <div class="carousel-inner">
-            <!-- Carousel 1 -->
-            <div class="carousel-item active">
-                <div class="custom-carousel banner-1">
-                    <div class=".carousel-full ">
-                        <div class="row h-100">
-                            <div class="col-md-1 col-sm-2"></div>
-                            <div
-                                class="col-md-7 col-sm-7 align-content-center d-flex flex-column justify-content-center h-100">
-                                <div class="carousel-content">
-                                    <h1 class="">Be the Next Fashion Sensation from the NorthEast!</h1>
-                                    <h4>Join the ultimate hunt for the best designers and models in the NorthEast.</h4>
-                                    <div class="row mt-4 d-flex flex-lg-row flex-md-column">
-                                        <div class="col">
-                                            <button type="button" class="button-danger">Enroll Now as Designer</button>
+    <div class="min-vh-100 position-relative">
+
+
+        <div id="landingPage" class="carousel slide carousel-fade">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#landingPage" class="custom-indicators active"
+                    data-bs-slide-to="0" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#landingPage" class="custom-indicators" data-bs-slide-to="1"
+                    class="" aria-current="true" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#landingPage" class="custom-indicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <!-- Carousel 1 -->
+                <div class="carousel-item active">
+                    <div class="custom-carousel banner-1">
+                        <div class=".carousel-full ">
+                            <div class="row h-100">
+                                <div class="col-md-1 col-sm-2"></div>
+                                <div
+                                    class="col-md-7 col-sm-7 align-content-center d-flex flex-column justify-content-center h-100">
+                                    <div class="carousel-content">
+                                        <h1 class="">Be the Next Fashion Sensation from the NorthEast!</h1>
+                                        <h4>Join the ultimate hunt for the best designers and models in the NorthEast.
+                                        </h4>
+                                        <div class="row mt-4 d-flex flex-md-row flex-sm-column">
+                                            <div class="col-sm-7 col-md-5">
+                                                <button type="button" class="button-danger">Enroll Now as
+                                                    Designer</button>
+                                            </div>
+                                            <div class="col-sm-7 col-md-5">
+                                                <button type="button" class="button-accept">Enroll Now as Model</button>
+                                            </div>
                                         </div>
-                                        <div class="col">
-                                            <button type="button" class="button-accept">Enroll Now as Model</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Carousel 2 -->
+                <div class="carousel-item">
+                    <div class="custom-carousel  banner-2">
+                        <div class=".carousel-full ">
+                            <div class="row h-100">
+                                <div class="col-md-1 col-sm-2"></div>
+                                <div
+                                    class="col-md-7 col-sm-7 align-content-center d-flex flex-column justify-content-center h-100">
+                                    <div class="carousel-content">
+                                        <h1 class="">Be the Next Fashion Sensation from the NorthEast!</h1>
+                                        <h4>Join the ultimate hunt for the best designers and models in the NorthEast.
+                                        </h4>
+                                        <div class="row mt-4 d-flex flex-md-row flex-sm-column">
+                                            <div class="col-sm-7 col-md-5">
+                                                <button type="button" class="button-danger">Enroll Now as
+                                                    Designer</button>
+                                            </div>
+                                            <div class="col-sm-7 col-md-5">
+                                                <button type="button" class="button-accept">Enroll Now as Model</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -169,26 +225,29 @@
                     </div>
                 </div>
 
-            </div>
-        </div>
+                <!-- Carousel 3 -->
+                <div class="carousel-item">
+                    <!-- <img src="..." class="d-block w-100" alt="..."> -->
+                    <div class="custom-carousel  banner-3">
 
-        <!-- Carousel 2 -->
-        <div class="carousel-item">
-            <div class="custom-carousel  banner-2">
-                <div class=".carousel-full ">
-                    <div class="row h-100">
-                        <div class="col-md-1 col-sm-2"></div>
-                        <div
-                            class="col-md-7 col-sm-7 align-content-center d-flex flex-column justify-content-center h-100">
-                            <div class="carousel-content">
-                                <h1 class="">Be the Next Fashion Sensation from the NorthEast!</h1>
-                                <h4>Join the ultimate hunt for the best designers and models in the NorthEast.</h4>
-                                <div class="row mt-4 d-flex flex-lg-row flex-md-column">
-                                    <div class="col">
-                                        <button type="button" class="button-danger">Enroll Now as Designer</button>
-                                    </div>
-                                    <div class="col">
-                                        <button type="button" class="button-accept">Enroll Now as Model</button>
+                        <div class=".carousel-full ">
+                            <div class="row h-100">
+                                <div class="col-md-1 col-sm-2"></div>
+                                <div
+                                    class="col-md-7 col-sm-7 align-content-center d-flex flex-column justify-content-center h-100">
+                                    <div class="carousel-content">
+                                        <h1 class="">Be the Next Fashion Sensation from the NorthEast!</h1>
+                                        <h4>Join the ultimate hunt for the best designers and models in the NorthEast.
+                                        </h4>
+                                        <div class="row mt-4 d-flex flex-md-row flex-sm-column">
+                                            <div class="col-sm-7 col-md-5">
+                                                <button type="button" class="button-danger">Enroll Now as
+                                                    Designer</button>
+                                            </div>
+                                            <div class="col-sm-7 col-md-5">
+                                                <button type="button" class="button-accept">Enroll Now as Model</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -196,44 +255,18 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Carousel 3 -->
-        <div class="carousel-item">
-            <!-- <img src="..." class="d-block w-100" alt="..."> -->
-            <div class="custom-carousel  banner-3">
 
-                <div class=".carousel-full ">
-                    <div class="row h-100">
-                        <div class="col-md-1 col-sm-2"></div>
-                        <div
-                            class="col-md-7 col-sm-7 align-content-center d-flex flex-column justify-content-center h-100">
-                            <div class="carousel-content">
-                                <h1 class="">Be the Next Fashion Sensation from the NorthEast!</h1>
-                                <h4>Join the ultimate hunt for the best designers and models in the NorthEast.</h4>
-                                <div class="row mt-4 d-flex flex-lg-row flex-md-column">
-                                    <div class="col">
-                                        <button type="button" class="button-danger">Enroll Now as Designer</button>
-                                    </div>
-                                    <div class="col">
-                                        <button type="button" class="button-accept">Enroll Now as Model</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#landingPage" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#landingPage" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button> -->
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#landingPage" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#landingPage" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
     </div>
     <!--######## Landing Page End ########-->
 
@@ -258,15 +291,14 @@
         </div>
 
         <div class="section-2 ">
-            <div
-                class="content-container d-flex justify-content-sm-center align-items-sm-center justify-content-md-start align-items-md-start">
-                <h1 class="title text-sm-center">Our Goal</h1>
-                <p class="content text-sm-center">Our mission? Simple. We aim to handpick the best designers and models
+            <div class="content-container">
+                <h1 class="title">Our Goal</h1>
+                <p class="content">Our mission? Simple. We aim to handpick the best designers and models
                     from the
                     Northeast and equip them with the tools and platform to shine globally. Our goal is to catapult
                     Northeast India’s fashion scene onto the world stage.</p>
             </div>
-            <div class="image-container m-4">
+            <div class="image-container">
                 <!-- <h1>Image</h1> -->
                 <!-- <img  alt="About Us" class="img-fluid"> -->
                 <!-- <image></image> -->
@@ -276,9 +308,9 @@
 
         <div class="section-3">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row mb-4">
                     <div class="col-12">
-                        <h1 class="title">Why Knitz N Glitz?</h1>
+                        <h1>Why Knitz N Glitz?</h1>
 
                     </div>
                     <div class="col-md-6 col-sm-12 header mt-4">
@@ -289,7 +321,7 @@
                             <div
                                 class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center flex-column">
                                 <h3 class="title text-center">Spotlight on Designers</h3>
-                                <p class="text-center">Showcase your innovative designs, receive dedicated brand
+                                <p class="content">Showcase your innovative designs, receive dedicated brand
                                     ambassadors, and get your brand into major retail stores across India.</p>
                             </div>
                         </div>
@@ -315,7 +347,10 @@
                     <div class="row mt-4 desktop-feature-container">
                         <div class="col-4 d-flex justify-content-center align-items-center">
                             <div class="feature">
-                                <img src="dj_assets/about_us/platform.png" class="mx-auto d-block" alt="Spotlight">
+                                <div class="img-container">
+
+                                    <img src="dj_assets/about_us/platform.png" class="mx-auto d-block" alt="Spotlight">
+                                </div>
                                 <h3 class="title">Grand Platform</h3>
                                 <p class="text-center">Step onto the Northeast’s biggest platform and launch your
                                     fashion
@@ -324,19 +359,25 @@
 
                             </div>
                         </div>
-                        <div class="col-4 justify-content-center align-items-center d-flex">
+                        <div class="col-4 justify-content-center align-items-start d-flex">
                             <div class="feature align-items-center justify-content-center d-flex flex-column">
-                                <img src="dj_assets/about_us/opportuinities.png" class="mx-auto d-block"
-                                    alt="Spotlight">
+                                <div class="img-container">
+                                    <img src="dj_assets/about_us/opportuinities.png" class="mx-auto d-block"
+                                        alt="Spotlight">
+                                </div>
+
                                 <h3 class="title">Boundless Opportunities</h3>
                                 <p class="content">With Knitz N Glitz, there’s no limit to the opportunities for
                                     showcasing
                                     your talent.</p>
                             </div>
                         </div>
-                        <div class="col-4 justify-content-center align-items-center d-flex">
+                        <div class="col-4 justify-content-center align-items-start d-flex">
                             <div class="feature">
-                                <img src="dj_assets/about_us/prizes.png" class="mx-auto d-block" alt="Spotlight">
+                                <div class="img-container">
+
+                                    <img src="dj_assets/about_us/prizes.png" class="mx-auto d-block" alt="Spotlight">
+                                </div>
                                 <h3 class="title">Prizes Galore</h3>
                                 <p class="content">Prizes that feel too good to be true.</p>
                             </div>
@@ -344,7 +385,11 @@
 
                         <div class="col-6 justify-content-center align-items-center d-flex">
                             <div class="feature">
-                                <img src="dj_assets/about_us/recognition.png" class="mx-auto d-block" alt="Spotlight">
+                                <div class="img-container">
+
+                                    <img src="dj_assets/about_us/recognition.png" class="mx-auto d-block"
+                                        alt="Spotlight">
+                                </div>
                                 <h3 class="title">Global Recognition</h3>
                                 <p class="content">We’re taking your talent to the world stage, where it truly belongs.
                                 </p>
@@ -352,7 +397,10 @@
                         </div>
                         <div class="col-6 justify-content-center align-items-center d-flex">
                             <div class="feature">
-                                <img src="dj_assets/about_us/celebs.png" class="mx-auto d-block" alt="Spotlight">
+                                <div class="img-container">
+
+                                    <img src="dj_assets/about_us/celebs.png" class="mx-auto d-block" alt="Spotlight">
+                                </div>
                                 <h3 class="title">Celebrity Judges</h3>
                                 <p class="content p-4">Shine under the spotlight of our star-studded panel of judges.
                                 </p>
@@ -364,18 +412,18 @@
 
                 <!-- Mobile Only -->
                 <div class="row mt-4 mobile-feature-container d-sm-flex d-md-none">
-                    <div id="features" class="carousel slide">
+                    <div id="features" class="carousel slide carousel-fade carouselv2">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#features" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#features" data-bs-slide-to="0"
+                                class="custom-indicators active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#features" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
+                                class="custom-indicators" aria-label="Slide 2"></button>
                             <button type="button" data-bs-target="#features" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
+                                class="custom-indicators" aria-label="Slide 3"></button>
                             <button type="button" data-bs-target="#features" data-bs-slide-to="3"
-                                aria-label="Slide 4"></button>
+                                class="custom-indicators" aria-label="Slide 4"></button>
                             <button type="button" data-bs-target="#features" data-bs-slide-to="4"
-                                aria-label="Slide 5"></button>
+                                class="custom-indicators" aria-label="Slide 5"></button>
 
                         </div>
                         <div class="carousel-inner">
@@ -410,27 +458,31 @@
                                     <p class="content">Prizes that feel too good to be true.</p>
                                 </div>
                             </div>
-                        </div>
 
 
-                        <div class="carousel-item">
-                            <div class="feature">
-                                <img src="dj_assets/about_us/recognition.png" class="mx-auto d-block" alt="Spotlight">
-                                <h3 class="title">Global Recognition</h3>
-                                <p class="content">We’re taking your talent to the world stage, where it truly belongs.
-                                </p>
+
+                            <div class="carousel-item">
+                                <div class="feature">
+                                    <img src="dj_assets/about_us/recognition.png" class="mx-auto d-block"
+                                        alt="Spotlight">
+                                    <h3 class="title">Global Recognition</h3>
+                                    <p class="content">We’re taking your talent to the world stage, where it truly
+                                        belongs.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="feature">
+                                    <img src="dj_assets/about_us/celebs.png" class="mx-auto d-block" alt="Spotlight">
+                                    <h3 class="title">Celebrity Judges</h3>
+                                    <p class="content p-4">Shine under the spotlight of our star-studded panel of
+                                        judges.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="carousel-item">
-                            <div class="feature">
-                                <img src="dj_assets/about_us/celebs.png" class="mx-auto d-block" alt="Spotlight">
-                                <h3 class="title">Celebrity Judges</h3>
-                                <p class="content p-4">Shine under the spotlight of our star-studded panel of judges.
-                                </p>
-                            </div>
-                        </div>
-
+                        <!-- 
                         <button class="carousel-control-prev" type="button" data-bs-target="#features"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -440,19 +492,161 @@
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
-                        </button>
+                        </button> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!--######## About Us End ########-->
-
     <!--######## Prizes Start ########-->
-    <div id="prizes">
-        <h1>T.B.D</h1>
+    <div id="prizes" class="prizes">
+        <div class="heading">
+            Unveiling the Most Coveted Prizes Ever!
+        </div>
+        <div class="prize-content">
+            <div class="row m-0 heading-row">
+                <div class="heading col-12">Grand Prizes</div>
+            </div>
+            <div class="row m-0 icons-row">
+                <div class="price-card col-12 col-lg-4">
+                    <div class="icon one">
+
+                    </div>
+                    <div class="content small-screens">
+                        Receive gifts and prizes worth <span>₹15 lakhs</span>
+                    </div>
+                </div>
+                <div class="price-card col-12 col-lg-4">
+                    <div class="icon two">
+
+                    </div>
+                    <div class="content small-screens">
+                        <span>Scholarship</span> at India’s top fashion institutes for designers
+                    </div>
+                </div>
+                <div class="price-card col-12 col-lg-4">
+                    <div class="icon three">
+
+                    </div>
+                    <div class="content small-screens">
+                        <span>Exclusive outlets</span> at Shopping Mall for top 10 designers
+                    </div>
+                </div>
+            </div>
+            <div class="row m-0 content-row large-screens">
+                <div class="price-card col-12 col-lg-4">
+                    <div class="content">
+                        Receive gifts and prizes worth <span>₹15 lakhs</span>
+                    </div>
+                </div>
+                <div class="price-card col-12 col-lg-4">
+                    <div class="content">
+                        <span>Scholarship</span> at India’s top fashion institutes for designers
+                    </div>
+                </div>
+                <div class="price-card col-12 col-lg-4">
+                    <div class="content">
+                        <span>Exclusive outlets</span> at Shopping Mall for top 10 designers
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="opportunities">
+            <div class="row m-0 heading-row">
+                <div class="col-12">Exclusive Opportunities</div>
+            </div>
+            <div class="row m-0 content-row">
+                <div class="col-sm-12 col-md-4 my-sm-2">One-year modelling contracts</div>
+                <div class="col-sm-12 col-md-4 my-sm-2">Features in national fashion magazines</div>
+                <div class="col-sm-12 col-md-4 my-sm-2">A chance to represent the Northeast on global platforms</div>
+            </div>
+        </div>
     </div>
     <!--######## Prizes End ########-->
+    <!--######## Participate Start ########-->
+
+    <div class="participate">
+        <div class="heading">
+            How to Participate?
+        </div>
+        <div class="steps">
+            <div class="center-red-line"></div>
+            <div class="row m-0">
+                <div class="step-card-container col-12 col-lg-4">
+                    <div class="step-card step-1">
+                        <div class="row m-0">
+                            <div class="icon-col large-screens col-lg-2">
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="icon-col small-screens">
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="col-lg-1"></div>
+                            <div class="content-col col-12 col-lg-9">
+                                <div class="step-icon"></div>
+                                <div class="step-count">Step 1</div>
+                                <div class="step-desc">Sign up as a designer or model</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-card-container col-12 col-lg-4">
+                    <div class="step-card step-2">
+                        <div class="row m-0">
+                            <div class="icon-col large-screens col-lg-2">
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="icon-col small-screens">
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="col-lg-1"></div>
+                            <div class="content-col col-12 col-lg-9">
+                                <div class="step-icon"></div>
+                                <div class="step-count">Step 2</div>
+                                <div class="step-desc">Fill out the registration form</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-card-container col-12 col-lg-4">
+                    <div class="step-card step-3">
+                        <div class="row m-0">
+                            <div class="icon-col large-screens col-lg-2">
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="icon-col small-screens">
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="col-lg-1"></div>
+                            <div class="content-col col-12 col-lg-9">
+                                <div class="step-icon"></div>
+                                <div class="step-count">Step 3</div>
+                                <div class="step-desc">Complete the payment</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="enroll-designer">
+                <button type="button">
+                    <span>
+                        Enroll as a Designer
+                    </span>
+                </button>
+            </div>
+            <div class="enroll-model">
+                <button type="button">
+                    <span>
+                        Enroll as a Model
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--######## Participate End ########-->
 
     <!--######## Registration Start ########-->
     <div id="registrationsOpen" class="registrations-open d-flex">
@@ -714,32 +908,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
     <script src="madhav.js"></script>
 
 </body>
-<script>
-    // Add active class to the current button (highlight it)
-    var btns = document.getElementsByClassName("navbar-link");
-    console.log("🚀 ~ document:", document)
-    console.log("🚀 ~ btns:", btns)
-    // var btns = header.getElementsByClassName("btn");
-    var toggleMobileMenu = document.querySelector('button[data-bs-target="#navbarNavMobile"]');
-
-    console.log("🚀 ~ toggleMobileMenu:", toggleMobileMenu)
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
-            toggleMobileMenu.click()
-            var current = document.getElementsByClassName("navbar-selected");
-            current[0].className = current[0].className.replace("navbar-selected", "");
-            this.className += " navbar-selected";
-        });
-    }
-</script>
 
 </html>

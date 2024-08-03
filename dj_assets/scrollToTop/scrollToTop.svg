@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.139" y1="0.146" x2="0.847" y2="0.865" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#c8a760"/>
+      <stop offset="0.134" stop-color="#ac6413"/>
+      <stop offset="0.228" stop-color="#fde5a7"/>
+      <stop offset="0.384" stop-color="#be7619"/>
+      <stop offset="0.473" stop-color="#d99b3f"/>
+      <stop offset="0.64" stop-color="#b86d15"/>
+      <stop offset="0.772" stop-color="#eba23f"/>
+      <stop offset="1" stop-color="#bd7518"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_5400" data-name="Group 5400" transform="translate(-2376 2578)">
+    <rect id="Rectangle_3941" data-name="Rectangle 3941" width="52.174" height="52.174" rx="26" transform="translate(2381.913 -2519.913) rotate(-90)" fill="url(#linear-gradient)"/>
+    <g id="Group_5399" data-name="Group 5399" transform="translate(2394.636 -2546) rotate(-45)">
+      <path id="Path_23332" data-name="Path 23332" d="M0,0H13.272V13.272" transform="translate(-0.788 6.381)" fill="none" stroke="#96082b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <g id="AdobeStock_299114892" transform="translate(2378 -2576)" fill="none" stroke="#b79027" stroke-linecap="round" stroke-width="2" stroke-dasharray="0 4">
+      <circle cx="30" cy="30" r="30" stroke="none"/>
+      <circle cx="30" cy="30" r="31" fill="none"/>
+    </g>
+  </g>
+</svg>
