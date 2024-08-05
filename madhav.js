@@ -71,16 +71,16 @@ function takeMeTo(page) {
       url = "http://ccavenue.com/";  
       break;
     case 'facebook':
-      url = "http://ccavenue.com/";  
+      url = "https://www.facebook.com/profile.php?id=61562886606851";  
       break;
     case 'instagram':
-      url = "http://ccavenue.com/";  
+      url = "https://www.instagram.com/knitznglitz2024/";  
       break;
     case 'twitter':
-      url = "http://ccavenue.com/";  
+      url = "https://x.com/knitznglit65177";  
       break;
     case 'youtube':
-      url = "http://ccavenue.com/";  
+      url = "https://www.youtube.com/@Knitznglitz2024";  
       break;
   }
   window.open(url, "_blank");
