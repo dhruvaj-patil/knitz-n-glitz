@@ -55,6 +55,37 @@ const carousel = new bootstrap.Carousel(landingPageCarousel, {
   wrap: true
 })
 
+function takeMeTo(page) {
+  let url = "";
+  switch (page) {
+    case 'enroll-designer':
+      url = "https://formbuilder.ccavenue.com/live/ccavenue/knitz-n-glitz/designer";  
+      break;
+    case 'enroll-model':
+      url = "https://formbuilder.ccavenue.com/live/ccavenue/knitz-n-glitz/model";  
+      break;
+    case 'register-now':
+      url = "http://ccavenue.com/";  
+      break;
+    case 'terms-conditions':
+      url = "http://ccavenue.com/";  
+      break;
+    case 'facebook':
+      url = "http://ccavenue.com/";  
+      break;
+    case 'instagram':
+      url = "http://ccavenue.com/";  
+      break;
+    case 'twitter':
+      url = "http://ccavenue.com/";  
+      break;
+    case 'youtube':
+      url = "http://ccavenue.com/";  
+      break;
+  }
+  window.open(url, "_blank");
+}
+
 
 // const featureCarousel = document.querySelector('#landingPage')
 // console.log("🚀 ~ featureCarousel:", featureCarousel)
