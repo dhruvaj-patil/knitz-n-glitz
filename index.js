@@ -56,6 +56,47 @@ const carousel = new bootstrap.Carousel(landingPageCarousel, {
 })
 
 
+$(document).ready(function () {
+  var marquee_width = $(".marquee-content-primary").width();
+  document.documentElement.style.setProperty(
+    "--marquee-padding",
+    marquee_width + "px"
+  );
+});
+
+
+function takeMeTo(page) {
+  let url = "";
+  switch (page) {
+    case 'enroll-designer':
+      url = "https://formbuilder.ccavenue.com/live/ccavenue/knitz-n-glitz/designer";  
+      break;
+    case 'enroll-model':
+      url = "https://formbuilder.ccavenue.com/live/ccavenue/knitz-n-glitz/model";  
+      break;
+    case 'register-now':
+      url = "http://ccavenue.com/";  
+      break;
+    case 'terms-conditions':
+      url = "window.location.href";  
+      break;
+    case 'facebook':
+      url = "https://www.facebook.com/profile.php?id=61562886606851";  
+      break;
+    case 'instagram':
+      url = "https://www.instagram.com/knitznglitz2024/";  
+      break;
+    case 'twitter':
+      url = "https://x.com/knitznglit65177";  
+      break;
+    case 'youtube':
+      url = "https://www.youtube.com/@Knitznglitz2024";  
+      break;
+  }
+  window.open(url, "_blank");
+}
+
+
 // const featureCarousel = document.querySelector('#landingPage')
 // console.log("🚀 ~ featureCarousel:", featureCarousel)
 

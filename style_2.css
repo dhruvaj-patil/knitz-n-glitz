@@ -1,15 +1,20 @@
 @font-face {
     font-family: 'Bitter';
-    src: url('dj_assets/fonts/Bitter-Regular.ttf') format('truetype');
+    src: url('./assets/fonts/Bitter-.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Neulis Cursive';
-    src: url('fonts/Neulis_Cursive_Bold.otf') format('truetype');
+    src: url('./assets/fonts/Neulis_Cursive_Bold.otf') format('opentype');
 }
 
 :root,
 [data-bs-theme=light] {
+
+/* Marquee */
+--marquee-padding :0px;
+--marquee-padding-negative: calc(var(--marquee-padding) * -1);
+
     /* --bs-navbar-active-color: #fff; */
 
     --navbar-text-color: #000000;
@@ -20,8 +25,8 @@
 
     --about-img-border: #B79027;
     /* replace */
-    --star-icon-red: url('dj_assets/header/star_red.svg');
-    --star-icon-white: url('dj_assets/header/star_white.svg');
+    --star-icon-red: url('assets_2/header/star_red.svg');
+    --star-icon-white: url('assets_2/header/star_white.svg');
     /* --star-icon-red: url("data:image/svg+xml,<svg margin='20' width='100' height='64' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M-17 30.5C-1 22 72-4 54 13 37.9 28.2-2.5 57.5 16 55.5s72-29 104-40' stroke='Crimson' stroke-width='14'/></svg>"); */
 
 
@@ -100,6 +105,8 @@
     text-wrap: nowrap;
     text-transform: capitalize;
     text-decoration: none;
+    font: normal normal normal 16px/25px Bitter;
+    letter-spacing: 0px;
 }
 
 /* .desktopOnly .navbar-link */
@@ -249,8 +256,8 @@ text-underline-offset: 2px;
         /* display: block; */
         /* background: red; */
         /* visibility: visible; */
-        background: url('dj_assets/header/nav_bg.png');
-        /* background: url(dj_assets/header/nav_bg.png); */
+        background: url('assets_2/header/nav_bg.png');
+        /* background: url(assets_2/header/nav_bg.png); */
         background-repeat: no-repeat;
         background-size: 100% 100%;
 
@@ -262,6 +269,8 @@ text-underline-offset: 2px;
         font-weight: 500;
         text-transform: capitalize;
         text-decoration: none;
+        font: normal normal normal 16px/25px Bitter;
+        letter-spacing: 0px;
     }
 
     .nav-item .navbar-link:hover {
@@ -346,7 +355,7 @@ text-underline-offset: 2px;
     /* background: blue; */
     justify-content: center;
     align-items: center;
-    background: url('dj_assets/landing_page/website_banner_1.png') 0% 0% no-repeat padding-box;
+    background: url('assets_2/landing_page/website_banner_1.png') 0% 0% no-repeat padding-box;
     background-size: 100% 100%;
 
 
@@ -377,19 +386,19 @@ text-underline-offset: 2px;
 }
 
 .custom-carousel.banner-1 {
-    background: url(dj_assets/landing_page/website_banner_1.png) 70%;
+    background: url(assets_2/landing_page/website_banner_1.png) 70%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .custom-carousel.banner-2 {
-    background: url(dj_assets/landing_page/website_banner_2.png) 70%;
+    background: url(assets_2/landing_page/website_banner_2.png) 70%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .custom-carousel.banner-3 {
-    background: url(dj_assets/landing_page/website_banner_3.png) 70%;
+    background: url(assets_2/landing_page/website_banner_3.png) 70%;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -462,7 +471,7 @@ text-underline-offset: 2px;
 /******* Landing Carousel END *******/
 /******** About Us Start  ********/
 #aboutUs .section-1 {
-    background: url('dj_assets/about_us/about_bg.png') 0% 0% no-repeat padding-box;
+    background: url('assets_2/about_us/about_bg.png') 0% 0% no-repeat padding-box;
     background-size: 100% 100%;
     min-height: 100vh;
     display: flex;
@@ -513,7 +522,7 @@ text-underline-offset: 2px;
 }
 
 #aboutUs .section-2 {
-    background: url('dj_assets/about_us/about_section_2.png') 0% 0% no-repeat padding-box;
+    background: url('assets_2/about_us/about_section_2.png') 0% 0% no-repeat padding-box;
     background-size: 100% 100%;
     min-height: 100vh;
     display: flex;
@@ -559,7 +568,7 @@ text-underline-offset: 2px;
 }
 
 #aboutUs .section-3 {
-    background: url('dj_assets/about_us/section_3.png') 0% 0% no-repeat padding-box;
+    background: url('assets_2/about_us/section_3.png') 0% 0% no-repeat padding-box;
     background-size: 100%;
     min-height: 100vh;
     display: flex;
@@ -695,6 +704,31 @@ text-underline-offset: 2px;
 
 /******** About Us End  ********/
 
-/******** participate Start ********/
+/* Marquee Tempororary Banner */
 
-/******** participate End ********/
+#tempMarquee p {
+    font: normal normal normal 16px/24px Bitter;
+    letter-spacing: 0px;
+}
+
+.marquee {
+    width: 450px;
+    line-height: 50px;
+    background-color: var(--company-red);
+    color: var(--company-white);
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.marquee p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 9s linear infinite;
+    font-size: 1.5em;
+    /* the 9s is the time it takes to go from RtoL */
+}
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+/* Marquee Tempororary Banner END */

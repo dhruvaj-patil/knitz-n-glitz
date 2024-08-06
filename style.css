@@ -24,6 +24,11 @@
     width: 80% !important;
 }
 
+button.transparent-button {
+    background: transparent;
+    border: 0;
+}
+
 /* prizes */
 div.prizes .small-screens {
     display: none;
@@ -361,7 +366,7 @@ div.registrations-open .counts .text {
     letter-spacing: 0px;
     opacity: 1;
 }
-div.registrations-open .terms-link {
+div.registrations-open .terms-link button {
     text-align: center;
     text-decoration: underline;
     font: normal normal normal 20px/30px Bitter;
@@ -422,7 +427,9 @@ div.sponsors {
     justify-content: center;
     align-items: center;
 }
-div.sponsors a{
+div.sponsors a,
+footer .contact-details .email .content>a,
+footer .contact-details .phone .content>a{
     color: var(--fonts-white-color);
     text-decoration: none;
 }
@@ -564,17 +571,21 @@ footer .social-media-icons .icons span {
     opacity: 1;
     margin-right: 12px;
 }
-footer .social-media-icons .icons .facebook {
+footer .social-media-icons .icons button .facebook {
     background: transparent url('assets/icons/facebook/Group_189.png') 0% 0% no-repeat padding-box;
+    display: block;
 }
-footer .social-media-icons .icons .instagram {
+footer .social-media-icons .icons button .instagram {
     background: transparent url('assets/icons/instagram/Group_188.png') 0% 0% no-repeat padding-box;
+    display: block;
 }
-footer .social-media-icons .icons .twitter {
+footer .social-media-icons .icons button .twitter {
     background: transparent url('assets/icons/twitter/Group_187.png') 0% 0% no-repeat padding-box;
+    display: block;
 }
-footer .social-media-icons .icons .youtube {
+footer .social-media-icons .icons button .youtube {
     background: transparent url('assets/icons/youtube/Group_5705.png') 0% 0% no-repeat padding-box;
+    display: block;
 }
 footer .social-media-icons .copyright {
     justify-content: end;
@@ -628,7 +639,7 @@ footer .social-media-icons .copyright {
     div.registrations-open .counts .text {
         font: normal normal normal 20px/89px Bitter;
     }
-    div.registrations-open .terms-link {
+    div.registrations-open .terms-link button {
         font: normal normal normal 16px/30px Bitter;
     }
 }
